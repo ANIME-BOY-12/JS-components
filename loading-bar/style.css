@@ -1,0 +1,87 @@
+body{
+    height: 96vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrap{
+    height: 200px;
+    width: 200px;
+    animation: rotate 1.5s infinite;
+}
+
+@keyframes rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.svg1{
+    height: 200px;
+    width: 200px;
+}
+
+.circular{
+    animation: loader 1.5s infinite;
+}
+
+@keyframes loader{
+    0%{
+        stroke-dasharray :10 ,510;
+        stroke-dashoffset: 10;
+    }
+    /* 25%{
+        stroke-dasharray :157 ,510; 
+        
+    } */
+    50%{
+        stroke-dasharray :80 ,510; 
+        stroke-dashoffset: -117;
+    }
+    100%{
+        stroke-dasharray :80 ,510; 
+        stroke-dashoffset: -320;
+    }
+}
+
+.box2{
+    height: 30px;
+    width: 100%;
+}
+.svg2{
+    width: 100%;
+    height: 30px;
+    animation: line-show 1.5s infinite;
+}
+
+
+@keyframes line-show{
+    0%{
+        stroke-dasharray: 10% 140%;
+        stroke-dashoffset: 0%;
+    }
+    50%{
+        stroke-dasharray: 20% 140%;
+        stroke-dashoffset: -65%;
+    }
+    100%{
+        stroke-dasharray: 10% 140%;
+        stroke-dashoffset: -130%;
+    }
+}
+@keyframes line-move{
+    0%{
+        width: 10%;
+        margin-left: 0%;
+    }
+    50%{
+        width: 10%;
+        margin-left: 45%;
+    }
+    100%{
+        width: 8%;
+        margin-left: 92%;
+    }
+}
