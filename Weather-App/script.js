@@ -8,10 +8,10 @@ const fetchdata = async(targetLocation)=>{
     let url = `http://api.weatherapi.com/v1/current.json?key=945e8600376a42babd740639240110&q=${targetLocation}&aqi=no`
 
     const res = await fetch(url)
-
+    // console.log(res);
     const data = await res.json()
 
-    console.log(data)
+    console.log(data);
 
     let icon = document.querySelector(".weather-icon")
     icon.src = data.current.condition.icon
